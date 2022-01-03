@@ -1,6 +1,2 @@
-from fleet import Fleet 
-from herd import Herd 
+from battlefield import Battlefield
 
-class Battlefield:
-
-  
