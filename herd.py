@@ -1,10 +1,9 @@
 from dinosaur import Dinosaur
 
 class Herd:
-  herd_list = []
 
   def __init__(self):
-    self.name = []
+    self.herd_list = []
     pass
 
   def create_herd(self):

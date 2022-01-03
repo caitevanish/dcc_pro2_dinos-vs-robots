@@ -2,10 +2,8 @@ from robot import Robot
 
 class Fleet:
   
-  list_robot = []
-
   def __init__(self):
-    self.list_robot = []
+    self.robot_list = []
     pass
 
   def create_fleet(self):
