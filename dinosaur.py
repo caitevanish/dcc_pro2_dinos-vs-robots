@@ -4,9 +4,10 @@ class Dinosaur:
     self.name = name
     self.attack_power = attack_power
     self.health = 100
-    pass
 
   def name_dino(self):
+    self.name()
+    print(f'{name} has ')
     pass
 
   def attack_power_dino(self, robot):
