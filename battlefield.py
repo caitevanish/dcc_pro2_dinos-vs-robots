@@ -12,6 +12,7 @@ class Battlefield:
   def run_game(self):
     self.display_welcome()
     self.introduction()
+    self.begin_game()
 
 
 #---------------------------------------------------
@@ -28,13 +29,25 @@ class Battlefield:
       print(f'{dinosaur.name}, aka, {dinosaur.nickname}')
 
   def introduction(self):
-    print("\nNow we aren’t here to have a tea party, we’re here to FIGHT!! \n \nEach of our dinosaurs has their own special attack that they can perform\n")
+    print("\nNow we aren’t here to have a tea party, we’re here to FIGHT!! \n \nEach of our dinosaurs has their own special attack that they can perform:\n")
     
     for dinosaur in self.herd.herd_list:
       print(f'{dinosaur.nickname} can {dinosaur.attack}')
  
+    print("\nThe robots are armed as well:\n")
 
-      
+    for robot in self.fleet.robot_list:
+      print(f'{robot.name} has a {robot.weapon.name}')
+
+  def begin_game(self):
+    user_answer = input("\nNow that you've met the players, are you ready to begin?: ")
+    if user_answer == 'yes':
+      print("Let's do it!")
+    else: 
+      print("Okay bye")
+
+
+#---------------------------------------------------
 
    # battle is mainly calling dino_turn and robot_turn
   def battle(self):
