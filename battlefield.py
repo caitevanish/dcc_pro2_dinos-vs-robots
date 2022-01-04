@@ -5,15 +5,19 @@ class Battlefield:
 
   def __init__(self):
     self.fleet = Fleet()
-    pass
+    self.herd = Herd()
+  
   
   def run_game(self):
     self.display_welcome()
-    pass
+    #print the list of the robots
+    #print the list of the dinosaurs  
+
 
   def display_welcome(self):
     print("welcome to RVD")
     pass
+
    # battle is mainly calling dino_turn and robot_turn
   def battle(self):
     pass
