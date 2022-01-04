@@ -6,17 +6,26 @@ class Battlefield:
   def __init__(self):
     self.fleet = Fleet()
     self.herd = Herd()
+    print('done')
   
+  # def __repr__(self) -> str:
+  #     pass
   
   def run_game(self):
     self.display_welcome()
     #print the list of the robots
     #print the list of the dinosaurs  
 
+#---------------------------------------------------
 
   def display_welcome(self):
-    print("welcome to RVD")
-    pass
+    print(f"Welcome to the epic battle of the millenia! Meet the furious fleet of robots:")
+
+    for robot in robot.robot_list:
+      print(robot.name)
+ 
+
+      
 
    # battle is mainly calling dino_turn and robot_turn
   def battle(self):
