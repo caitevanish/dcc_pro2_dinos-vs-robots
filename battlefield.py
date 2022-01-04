@@ -19,10 +19,17 @@ class Battlefield:
 #---------------------------------------------------
 
   def display_welcome(self):
-    print(f"Welcome to the epic battle of the millenia! Meet the furious fleet of robots:")
-
-    for robot in robot.robot_list:
+    print("\nWelcome to the epic battle of the millenia! Meet the furious fleet of robots:\n")
+    
+    for robot in self.fleet.robot_list:
       print(robot.name)
+
+    print("\nAnd of the Jurassic weight class, give it up for the horrible herd:\n")
+
+    for dinosaur in self.herd.herd_list:
+      print(dinosaur.name)
+
+
  
 
       
