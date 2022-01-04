@@ -7,29 +7,31 @@ class Battlefield:
     self.fleet = Fleet()
     self.herd = Herd()
     print('done')
-  
-  # def __repr__(self) -> str:
-  #     pass
+
   
   def run_game(self):
     self.display_welcome()
-    #print the list of the robots
-    #print the list of the dinosaurs  
+    self.introduction()
+
 
 #---------------------------------------------------
 
   def display_welcome(self):
     print("\nWelcome to the epic battle of the millenia! Meet the furious fleet of robots:\n")
-    
+
     for robot in self.fleet.robot_list:
       print(robot.name)
 
     print("\nAnd of the Jurassic weight class, give it up for the horrible herd:\n")
 
     for dinosaur in self.herd.herd_list:
-      print(dinosaur.name)
+      print(f'{dinosaur.name}, aka, {dinosaur.nickname}')
 
-
+  def introduction(self):
+    print("\nNow we aren’t here to have a tea party, we’re here to FIGHT!! \n \nEach of our dinosaurs has their own special attack that they can perform\n")
+    
+    for dinosaur in self.herd.herd_list:
+      print(f'{dinosaur.nickname} can {dinosaur.attack}')
  
 
       
