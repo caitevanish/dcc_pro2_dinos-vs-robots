@@ -9,8 +9,6 @@ class Fleet:
     
 
   def create_fleet(self):
-    # robot_weapon = Weapon()
-    # robot_weapon.pick_weapon()
 
     weapon = Weapon("Cannon", 20)
     robot_one = Robot("T-2022", weapon)
@@ -24,4 +22,3 @@ class Fleet:
     self.fleet_list.append(robot_one)
     self.fleet_list.append(robot_two)
     self.fleet_list.append(robot_three)
-
