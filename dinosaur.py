@@ -9,9 +9,11 @@ class Dinosaur:
 
       
   def dino_attack(self, robot, fleet_list): #battle() -> dino_turn()
-    print(f"It's {self.nickname}'s turn to fight {robot.name}!\n")#hit enter to continue
+    print(f"It's {self.nickname}'s turn to fight {robot.name}!\n")
+
     robot.health -= self.attack_power
-    print(f"\n{self.nickname} {self.attack}s {robot.name}, they are at {robot.health}% power")
+    print(f"{self.nickname} {self.attack}s {robot.name}, they are at {robot.health}% power\n")
+    
     if robot.health <= 0:
       print(f"{self.nickname} beat {robot.name}!")
       fleet_list.remove(robot)

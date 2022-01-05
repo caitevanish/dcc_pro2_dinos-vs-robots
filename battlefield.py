@@ -11,11 +11,9 @@ class Battlefield:
 
   
   def run_game(self):
-    self.display_welcome()
-    self.introduction()
-    print('done 3')
-    self.begin_game()
-    print('done 4')
+    self.display_welcome() #TESTED
+    self.introduction() #TESTED
+    self.begin_game() #TESTED
     self.battle()
     self.show_dino_options() #TESTED
 
@@ -38,12 +36,12 @@ class Battlefield:
 #---------------------------------------------------
 
   def display_welcome(self):
-    print("\nWelcome to the epic battle of the millenia! Meet the furious fleet of robots:\n")
+    print("\nWelcome to the epic battle of the millenia! \nMeet the furious fleet of robots:\n")
 
     for robot in self.fleet.fleet_list:
       print(robot.name)
 
-    print("\nAnd of the Jurassic weight class, give it up for the horrible herd:\n")
+    print("\nAnd of the Jurassic weight class, give it up for this horrible herd:\n")
 
     for dinosaur in self.herd.herd_list:
       print(f'{dinosaur.name}, aka, {dinosaur.nickname}')
@@ -65,6 +63,7 @@ class Battlefield:
       print("Let's do it!")
     else: 
       print("Okay bye")
+      quit()
 
   def battle(self):
     #while loop between teams
@@ -73,12 +72,14 @@ class Battlefield:
     #self.fleet.fleet_list = []
     # TESTED dino_attack 
     self.herd.herd_list[0].dino_attack(self.fleet.fleet_list[0], self.fleet.fleet_list)
+    
+    self.fleet.fleet_list[0].robot_attack(self.herd.herd_list[0], self.herd.herd_list)
+
+
+
     # need to test robot_attack
 
-  def round_one(self, dino):
-    self.herd.herd_list[0] = dino
-    first_dino = self.herd.herd_list[0]
-    print(first_dino)
+
 
     # self.fleet.fleet_list[0] = robot
     # return(dino,robot)
@@ -98,7 +99,7 @@ class Battlefield:
    # battle is mainly calling dino_turn and robot_turn
   # def battle(self):
     
-    pass
+ 
   # this is where the attack method should be called to have them actually fight
   # self.fleet.robot_one.attack(dino_one)
   def dino_turn(self):
@@ -112,18 +113,34 @@ class Battlefield:
   #   pass
 
   def show_dino_options(self):
-    print("Dinosaurs Availalbe to Choose")
-    index_refrence = 0
-    for dino in self.herd.herd_list:
-      print(f'Press {index_refrence} to select {dino.name} ({dino.health} health)')
-      index_refrence += 1
-    pass
+    print("Choose a dinosaur to send to battle:")
+    index_reference = 1
+    for dinosaur in self.herd.herd_list:
+      print(f'Press {index_reference} to select {dinosaur.nickname} [health level: {dinosaur.health} | Attack style: {dinosaur.attack}]')
+      index_reference += 1
+      
+    user_input = input("")
+
+    if user_input == 1:
+      print(f"You chose {self.herd.herd_list[0].nickname}")
+      return
+
+    elif user_input == 2:
+      print(f"You chose {self.herd.herd_list[1].nickname}")
+
+    elif user_input == 3:
+      print(f"You chose {self.herd.herd_list[2].nickname}")
+
 
   def show_robo_options(self):
-    pass
-
+    print("Choose a robot to send to battle:")
+    index_reference = 0
+    for robot in self.fleet.fleet_list:
+      print(f'Press{index_reference} to select {robot.name} [Power level:{robot.health} | weapon: {robot.weapon.name}]')
+      index_reference += 1
+    
   # def display_winners(self):
-    pass
+    # pass
 
 
 
