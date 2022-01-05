@@ -7,6 +7,10 @@ class Robot:
     self.name = name
     self.weapon = weapon
     self.health = 100
+
+  def robot_attack(self, dinosaur):
+
+
     # self.selected_weapon = weapon
     # self.select_weapon()
 
@@ -19,7 +23,5 @@ class Robot:
   #   random.choice([self.weapon1, self.weapon2, self.weapon3])
   #   return
 
-  def attack(self, dinosaur):
-    is_alive = True
-    # if self.is_alive != True
-    pass
+
+    

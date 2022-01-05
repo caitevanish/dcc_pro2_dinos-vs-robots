@@ -16,10 +16,8 @@ class Battlefield:
     print('done 3')
     self.begin_game()
     print('done 4')
-    # self.round_one()
-    #print(len(robot_list))
-   
     self.battle()
+    self.show_dino_options() #TESTED
 
 
 
@@ -69,11 +67,13 @@ class Battlefield:
       print("Okay bye")
 
   def battle(self):
-    #first round: select fighters
-    self.round_one(self)
-
-
-    self.dinosaur.dino_attack()
+    #while loop between teams
+    #while both lists longer than 0, continue going through battle sequence
+    #self.herd.herd_list = []
+    #self.fleet.fleet_list = []
+    # TESTED dino_attack 
+    self.herd.herd_list[0].dino_attack(self.fleet.fleet_list[0], self.fleet.fleet_list)
+    # need to test robot_attack
 
   def round_one(self, dino):
     self.herd.herd_list[0] = dino
@@ -111,11 +111,16 @@ class Battlefield:
   #   round_count = counter += 1
   #   pass
 
-  # def show_dino_opponent_options(self):
-  #   pass
+  def show_dino_options(self):
+    print("Dinosaurs Availalbe to Choose")
+    index_refrence = 0
+    for dino in self.herd.herd_list:
+      print(f'Press {index_refrence} to select {dino.name} ({dino.health} health)')
+      index_refrence += 1
+    pass
 
-  # def show_robo_opponent_options(self):
-  #   pass
+  def show_robo_options(self):
+    pass
 
   # def display_winners(self):
     pass

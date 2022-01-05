@@ -6,25 +6,28 @@ class Dinosaur:
     self.health = 100
     self.attack = attack
     self.attack_power = attack_power
-    
-      
-def dino_attack(self, robot): #battle() -> dino_turn()
-    dino_turn = True
-    
-    while (dino_turn == True) and (robot.health > 0):
-      print(f"It's {self.nickname}'s turn to fight {robot.name}!\n")#hit enter to continue
-      
-      robot.health -= self.attack_power
-      print(f"\n{self.nickname} {self.attack}s {robot.name}, they are at {robot.health}% power")      
 
-    if (robot.health > 0):
-      dino_turn == False
-      print(f"Now it's {robot.name}'s turn")
-      #append robots health?
-      return(robot)
-
-    else:
+      
+  def dino_attack(self, robot, fleet_list): #battle() -> dino_turn()
+    print(f"It's {self.nickname}'s turn to fight {robot.name}!\n")#hit enter to continue
+    robot.health -= self.attack_power
+    print(f"\n{self.nickname} {self.attack}s {robot.name}, they are at {robot.health}% power")
+    if robot.health <= 0:
       print(f"{self.nickname} beat {robot.name}!")
+      fleet_list.remove(robot)
+
+
+    
+    
+    
+    
+     # if (robot.health > 0):
+    #   dino_turn == False
+    #   print(f"Now it's {robot.name}'s turn")
+    #   #append robots health?
+    #   return(robot)
+
+
       #subtract from robot team 1
       #return results and initiate display_winners method in battlefield class?
       #battlefield.display_winners()    
