@@ -2,7 +2,7 @@ class Weapon:
 
   def __init__(self, name, attack_power):
     self.name = name
-    self.power = attack_power
+    self.attack_power = attack_power
 
   
 #   # I should take this out because the user cannot add their own weapons, right?:
