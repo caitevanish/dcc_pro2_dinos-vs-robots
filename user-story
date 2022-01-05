@@ -13,23 +13,43 @@ Sword (cut) - attack power - 25
 Cannon (shoot) - 20
 Morning star (hit) - 25
 
+---
+
 Welcome to the epic battle of the millenia!
 Meet the furious fleet of robots:
+
+T-2022
+Sabotage 1000
+MurderPal v2
+
+And of the Jurassic weight class, give it up for the horrible herd:
+
+Tyrannosaurus Rex, aka, T-bone
+Pachycephalosaurus, aka, Pach-o
+Diplodocus, aka, Docus
 
 Now we aren’t here to have a tea party, we’re here to FIGHT!
 
 Each our dinosaurs has their own special attack that they can perform:
 
-T-bone can \__
-Pach-o can _
-Docus can \_
+T-bone can bite
+Pach-o can ram
+Docus can whip
 
-The robots on the other hand want you to choose a weapon from them:
+The robots are armed as well:
 
-For T-2022 you want to equip him with a \_\_\_
-1-sword
-2-cannon
-3-morning star
+T-2022 has a Cannon
+Sabotage 1000 has a Sword
+MurderPal v2 has a Morning Star
 
-Sabotage 1000
-MurderPal v2
+Now that you've met the players, are you ready to begin?: yes
+Let's do it!
+
+First up from the dinosaur team is \_**\_
+They will be fighting \_\_\_**.
+To be polite, the nearly extinct species can start off the fight.
+
+Begin!
+
+[dino] [attack]s [robo] and does [int] damage.
+[robo] counters the attack and

@@ -19,14 +19,7 @@ class Robot:
   #   random.choice([self.weapon1, self.weapon2, self.weapon3])
   #   return
 
-  # def attack(self, dinosaur):
-  #     is_alive !=  True 
-  #   pass
-
-
-  # def name_robot(self):
-  #   pass
-
-
-  # def health_robot(self):
-  #   pass
+  def attack(self, dinosaur):
+    is_alive = True
+    # if self.is_alive != True
+    pass

@@ -6,13 +6,18 @@ class Battlefield:
   def __init__(self):
     self.fleet = Fleet()
     self.herd = Herd()
-    print('done')
+    #print('done')
 
   
   def run_game(self):
     self.display_welcome()
-    self.introduction()
-    self.begin_game()
+    #self.introduction()
+    #self.begin_game()
+    self.round_one()
+    print(len(robot_list))
+
+    self.battle()
+
 
 
 #---------------------------------------------------
@@ -45,8 +50,16 @@ class Battlefield:
       print("Let's do it!")
     else: 
       print("Okay bye")
+  
+  robot_list_length = len(self.fleet.robot_list)
+  print(robot_list_length)
 
-
+  #def round_one(self):
+    # robot_health = Fleet(robot_list.health)
+    # print(robot_health)
+    #dino_health =  
+    #attack
+    #self.first_attack = (fleet.robot_list.robot_one.health)  
 #---------------------------------------------------
 
    # battle is mainly calling dino_turn and robot_turn
@@ -55,9 +68,13 @@ class Battlefield:
   # this is where the attack method should be called to have them actually fight
   # self.fleet.robot_one.attack(dino_one)
   def dino_turn(self):
+    #dinosaur.attack()
     pass
 
   def robo_turn(self, robot):
+    #robo.attack
+    counter = 0
+    round_count = counter += 1
     pass
 
   def show_dino_opponent_options(self):
