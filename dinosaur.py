@@ -6,8 +6,7 @@ class Dinosaur:
     self.health = 100
     self.attack = attack
     self.attack_power = attack_power
-
-      
+ 
   def dino_attack(self, robot, fleet_list):
     input(f"\nIt's {self.nickname}'s turn to fight {robot.name}!\n")
     # print(f"It's {self.nickname}'s turn to fight {robot.name}!\n")
@@ -20,10 +19,6 @@ class Dinosaur:
       fleet_list.remove(robot)
 
 
-    
-    
-    
-    
 
 # # bonus text for describing robot's current health:
       # if (defender_health is 75:100):

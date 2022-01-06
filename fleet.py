@@ -6,8 +6,7 @@ class Fleet:
   def __init__(self):
     self.fleet_list = []
     self.create_fleet()
-    
-
+  
   def create_fleet(self):
 
     weapon = Weapon("Cannon", 20)

@@ -9,30 +9,17 @@ class Battlefield:
     self.herd = Herd()
     print('done 2')
 
-  
   def run_game(self):
     self.display_welcome() #TESTED
     self.introduction() #TESTED
     self.begin_game() #TESTED
-    self.battle()
-    self.display_winners()
+    self.battle() #This is the scenic route to the end.
+
+    # Quick_battle() is a shortcut. 
+    #Comment out self.battle() and uncomment quick_battle below
+    #self.quick_battle()  
     
-
-
-
-
-# Test Loop----------------      
-   # self.test()
-
-  # def test(self):
-  #   for dinosaur in self.herd.herd_list:
-  #     print(f'{dinosaur.nickname} + {dinosaur.attack} + {dinosaur.attack_power}')
-
-  # def test(self):
-  #   for robot in self.fleet.robot_list:
-  #     print(f'{robot.name} + {robot.weapon.name} + {robot.weapon.attack_power}')
-# #-----------------
-
+    self.display_winners()
 
 #---------------------------------------------------
 
@@ -73,38 +60,19 @@ class Battlefield:
         pass
       else:
         self.robo_turn()
-    
-    
 
+# #Get to the end faster
+  #def quick_battle(self):
+    # self.herd.herd_list = ["Docus"]
+    # self.fleet.fleet_list = []
+    # if (len(self.herd.herd_list) != 0):
+    #   self.display_winners()
 
-
-    # need to test robot_attack
-
-
-
-    # self.fleet.fleet_list[0] = robot
-    # return(dino,robot)
-    
-    # for dino in self.herd.herd_list:
-    #   print(f'{.nickname} + {robot.weapon.name} + {robot.weapon.attack_power}')
-
-
-  # def round_one(self):
-  #   robot_health = Fleet(robot_list.health)
-  #   print(robot_health)
-  #   dino_health =  
-  #   attack
-  #   self.first_attack = (fleet.robot_list.robot_one.health)  
 #---------------------------------------------------
 
-   # battle is mainly calling dino_turn and robot_turn
-  # def battle(self):
-    
- 
-  # this is where the attack method should be called to have them actually fight
-  # self.fleet.robot_one.attack(dino_one)
   def dino_turn(self):
 
+    #Fix so that if the wrong button is pushed, person can resubmit answer!!!
     self.show_dino_options()
     dino_index = int(input("\n"))
     self.show_robo_options()
@@ -137,10 +105,22 @@ class Battlefield:
       print(f'Press {index_reference} to select {robot.name} [Power level: {robot.health} | weapon: {robot.weapon.name}]')
       index_reference += 1
 
-    
+
   def display_winners(self):
-    pass
+    if (len(self.herd.herd_list) > 0):
+      print(f'Congratulations to the Horrible Herd of Dinosaurs! {self.herd.herd_list.nickname} is the last killer standing!')
+    else:
+      print(f'Congratulations to the Furious Fleet of Robots! {self.fleet.fleet_list.name} is the last killer standing!')
 
 
+# Test Loop----------------      
+   # self.test()
 
+  # def test(self):
+  #   for dinosaur in self.herd.herd_list:
+  #     print(f'{dinosaur.nickname} + {dinosaur.attack} + {dinosaur.attack_power}')
 
+  # def test(self):
+  #   for robot in self.fleet.robot_list:
+  #     print(f'{robot.name} + {robot.weapon.name} + {robot.weapon.attack_power}')
+# #-----------------
