@@ -1,3 +1,4 @@
 from battlefield import Battlefield
-battlefield = Battlefield()
+
+battlefield = Battlefield() #instantiating battlefield here
 battlefield.run_game()

@@ -47,11 +47,14 @@ class Battlefield:
 
   def begin_game(self):
     user_answer = input("\nNow that you've met the players, are you ready to begin?: ")
-    if user_answer == 'yes':
+    if user_answer == 'yes' or 'y':
       print("Let's do it!\n")
-    else: 
+    elif user_answer == 'no' or 'n':
       print("Okay bye")
       quit()
+    # else: 
+    #   Make a varificationstep here to restart when an incorrect input has been made
+  
 
   def battle(self):
     while len(self.fleet.fleet_list) > 0 and len(self.herd.herd_list) > 0:
